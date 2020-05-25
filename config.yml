@@ -1,0 +1,16 @@
+title: hello-monde2
+description: just a test to see if this changes the update
+template:
+  repo: hello-monde2-template
+  name: hello-monde2
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
